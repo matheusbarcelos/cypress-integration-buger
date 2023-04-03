@@ -4,12 +4,13 @@
   "description": "Projeto de testes de aceitação do app BugerEats",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run",
+    "test": "cypress run --env allure=true",
     "open": "cypress open"
   },
   "author": "Matheus Barcelos",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.37.0",
     "cypress": "^10.7.0",
     "cypress-file-upload": "^5.0.8",
     "faker": "^5.5.3",
