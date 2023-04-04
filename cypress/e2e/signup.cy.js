@@ -19,6 +19,7 @@ describe('Signup', () => {
     signup.fillForm(deliver)
     signup.submit()
     signup.modalContentShouldBe(expectedMessage)
+    cy.screenshot()
   })
 
   it('Incorrect document', function() {
@@ -31,6 +32,7 @@ describe('Signup', () => {
     signup.fillForm(deliver)
     signup.submit()
     signup.alertMessageShouldBe('Oops! CPF inválido')
+    cy.screenshot()
   });
 
   it('Incorrect email', function() {
@@ -43,6 +45,7 @@ describe('Signup', () => {
     signup.fillForm(deliver)
     signup.submit()
     signup.alertMessageShouldBe('Oops! Email com formato inválido.')
+    cy.screenshot()
   });
 
   context('Required fields', function(){

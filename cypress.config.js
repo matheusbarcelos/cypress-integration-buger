@@ -9,6 +9,7 @@ module.exports = defineConfig({
     baseUrl: "https://buger-eats-qa.vercel.app/",
     setupNodeEvents(on, config) {
       allureWriter(on, config);
+      allureAddVideoOnPass:true;
       return config;
       // implement node event listeners here
     },
